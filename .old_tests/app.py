@@ -1,7 +1,9 @@
 from flask import Flask
-from maisqfood.ext import site
+
+import views
+
 
 def create_app():
     app = Flask(__name__)
-    site.init_app(app)
+    views.init_app(app)
     return app
