@@ -26,11 +26,12 @@ jobs:
         python-version: 3.8
     - name: Install dependencies
       run: |
-        make install
-
+       make install
+    
+    - name: Database Migrations
+      run: |
+       make init_db
+       
     - name: Run tests
       run: |
-        make test
-    - name: Test with pytest
-      run: |
-        pytest
+       make test
