@@ -15,6 +15,11 @@ clean:
 install:
 	pip install -e .['dev']
 
+init_db:
+	FLASK_APP=maisqfood/app.py flask create-db
+	FLASK_APP=maisqfood/app.py flask db upgrade
+
+
 test:
-	pytest tests/ -v --cov=maisqfood
+	FLASK_ENV=test pytest tests/ -v --cov=maisqfood
 	
