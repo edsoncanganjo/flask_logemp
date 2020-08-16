@@ -6,11 +6,10 @@ def read(filename):
 setup(
     name="maisqfood",
     version="0.1.0",
-    desciption="Delivery APP",
+    description="Delivery app",
     packages=find_packages(),
     include_package_data=True,
-    install_requeres=read("requeriments.txt"),
-    extras_require={
-        "dev": read("requeriments-dev.txt")
-    }
+    install_requires=read("requirements.txt"),
+    extras_require={"dev": read("requirements-dev.txt")},
 )
+
