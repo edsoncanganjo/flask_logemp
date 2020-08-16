@@ -17,3 +17,4 @@ install:
 
 test:
 	pytest tests/ -v --cov=maisqfood
+	
