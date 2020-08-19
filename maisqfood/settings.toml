@@ -1,0 +1,37 @@
+[default]
+DEBUG = false
+FLASK_ADMIN_SWATCH = "cyborg"
+ADMIN_NAME = "MaisQfooD"
+EXTENSIONS = [
+    "maisqfood.ext.db:init_app",
+    "maisqfood.ext.auth:init_app",
+    "maisqfood.ext.admin:init_app",
+    "maisqfood.ext.migrate:init_app",
+    "maisqfood.ext.cli:init_app",
+    "maisqfood.ext.site:init_app",
+    "maisqfood.ext.hooks:init_app",
+]
+
+[development]
+DEBUG = true
+SECRET_KEY = '\xff\xa9\xa1,\x94\x92\xd2V\xdc\xe2\x80!\xa4\x88H'
+SQLALCHEMY_DATABASE_URI = 'sqlite:///maisqfood.db'
+SQLALCHEMY_TRACK_MODIFICATIONS = false
+DEBUG_TB_TEMPLATE_EDITOR_ENABLED = true
+DEBUG_TB_PROFILER_ENABLED = true
+DEBUG_TB_INTERCEPT_REDIRECTS = false
+ADMIN_NAME = "MaisQfooD (dev mode)"
+EXTENSIONS = [
+    "maisqfood.ext.db:init_app",
+    "maisqfood.ext.auth:init_app",
+    "maisqfood.ext.admin:init_app",
+    "maisqfood.ext.migrate:init_app",
+    "maisqfood.ext.cli:init_app",
+    "maisqfood.ext.toolbar:init_app",
+    "maisqfood.ext.site:init_app",
+    "maisqfood.ext.hooks:init_app",
+]
+
+[production]
+SQLALCHEMY_TRACK_MODIFICATIONS = false
+SQLALCHEMY_DATABASE_URI = 'mysql:///...'

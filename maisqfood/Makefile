@@ -22,4 +22,11 @@ init_db:
 
 test:
 	FLASK_ENV=test pytest tests/ -v --cov=maisqfood
+
+format:
+	isort **/*.py
+	black -l 79 **/*.py
+
+run:
+	FLASK_APP=maisqfood/app.py FLASK_ENV=development flask run
 	
