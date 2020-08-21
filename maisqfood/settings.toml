@@ -14,7 +14,6 @@ EXTENSIONS = [
 
 [development]
 DEBUG = true
-SECRET_KEY = '\xff\xa9\xa1,\x94\x92\xd2V\xdc\xe2\x80!\xa4\x88H'
 SQLALCHEMY_DATABASE_URI = 'sqlite:///maisqfood.db'
 SQLALCHEMY_TRACK_MODIFICATIONS = false
 DEBUG_TB_TEMPLATE_EDITOR_ENABLED = true
