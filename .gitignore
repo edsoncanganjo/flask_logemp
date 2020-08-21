@@ -130,3 +130,6 @@ dmypy.json
 
 #db
 maisqfood/maisqfood.db
+
+#secrets
+maisqfood/.secrets.toml
