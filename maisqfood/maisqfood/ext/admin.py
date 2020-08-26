@@ -1,5 +1,6 @@
 from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
+
 from maisqfood.ext.db import db
 from maisqfood.ext.db.models import Category
 
